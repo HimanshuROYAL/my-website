@@ -1,21 +1,51 @@
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* General */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  background: #f4f5f7;
-  color: #222;
+  background-color: #F9FAFB;
+  color: #111827;
   line-height: 1.6;
 }
 
+/* Header */
 header {
-  background: #004aad;
+  background: #1E3A8A;
   color: white;
+  padding: 20px;
   text-align: center;
-  padding: 2em 0;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+/* Profile Image */
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin: 10px auto;
+  display: block;
+  object-fit: cover;
+  border: 4px solid #3B82F6;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Navigation */
+nav {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 nav a {
-  color: #fff;
-  margin: 0 15px;
+  color: white;
   text-decoration: none;
   font-weight: 600;
 }
@@ -24,40 +54,48 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* Sections */
 section {
-  padding: 2em 4em;
-  background: #fff;
-  margin: 1em auto;
-  max-width: 900px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin: 20px;
+  background: white;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
+section:hover {
+  transform: scale(1.01);
+}
+
+/* Headings */
 h2 {
-  border-bottom: 2px solid #004aad;
-  padding-bottom: 0.3em;
+  color: #1E3A8A;
 }
 
-.job span {
-  font-size: 0.9em;
-  color: #555;
+/* Cards */
+.card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-ul li::before {
-  content: "✔ ";
-  color: #004aad;
-  font-weight: bold;
-}
-
+/* Footer */
 footer {
-  background: #004aad;
+  background: #1E3A8A;
   color: white;
   text-align: center;
-  padding: 1em;
-  font-size: 0.9em;
+  padding: 15px;
+}
+
+footer a {
+  color: #93C5FD;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
